@@ -21,4 +21,29 @@ def popular():
 
     #alunos
     criar_aluno("João Silva", "joao@escola.local", "senha123", "9A")
-    criar_aluno("Ma")
+    criar_aluno("Maria Oliveira", "maria@escola.local", "senha123", "8B")
+
+    #professor
+    criar_professor("Carlos Souza", "carlos@escola.local", "senha123", disciplina="História")
+    criar_professor("patrícia Lima", "patricia@escila.local", "senha123", disciplina="Português")
+
+    # bibliotecario / diretor / supervisor
+    criar_bibliotecario("Ana Bibli", "ana.bibli@escola.local","senha123")
+    criar_diretor("João Diretor", "joao.dir@escola.local", "senha123")
+    criar_supervisor("Supervisor X", "supx@escola.local", "senha123")
+
+    #emprestimo exemplo (aluno 1 pega livro 1)
+    criar_emprestimo(1,1)
+    #reserva exemplo
+    criar_reserva(2,2)
+    # sugestão
+    criar_sugestao("Livro Nova", "Autor X", "Fição", "Seria bom ter este livro.", aluno_id=1)
+    # histórico
+    criar_historico(1,1)
+    #relatório exemplo
+    criar_relatorio("mensal", "2025-08-01", "2025-08-31", gerodo_por_bibliotecario=1)
+
+    print("Dados de exemplo inserridos (verifique ids e tabelas).")
+
+if __name__=="__main__":
+    popular()
