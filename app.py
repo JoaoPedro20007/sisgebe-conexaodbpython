@@ -24,6 +24,11 @@ import crud.relatorio as crud_relatorio
 app = Flask(_name_)
 app.secret_key = "troque_esta_chave_em_producao"
 
+# Página inicial
+@app.route("/")
+def index():
+    return render_template("index.html")
+
 # =========================================================
 #                      AUTENTICAÇÃO
 # =========================================================
